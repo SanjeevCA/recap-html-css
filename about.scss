@@ -1,0 +1,62 @@
+@import "variables";
+
+@mixin hFormat($size, $color, $weight){
+    font-size: $size;
+    color: $color;
+    font-weight: $weight;
+}
+
+@mixin image{
+    width: 300px;
+    height: 300px;
+    border: 2px solid black;
+    &:hover{
+        box-shadow: 4px 4px rgb(245, 221, 10);
+        transform: rotate(20deg);
+        
+    }
+    transition: .5s ease-in-out;
+}
+
+body{
+    background-color: $bgColor;
+    font-family: 'Poppins', sans-serif;
+}
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.imgBox{
+    // width: 400px;
+    // height: 400px;
+    // margin-top: 20px;
+    @include image();
+    overflow: hidden;
+    img {
+        height: 100%;
+    }
+
+    animation: imageAnim 6s;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes imageAnim{
+    0%{margin-left:0px;}
+    50%{margin-left:145px;}
+    100%{margin-right:0;}
+}
+
+header{
+    h1{
+        @include hFormat($h1-fontSize, $h1-color, 900)
+    }
+    
+    h4 {
+        @include hFormat($h4-fontSize, $h4-color, 600)
+    }
+}

@@ -1,0 +1,83 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;600;900&display=swap");
+body {
+  background-color: #fff0c7;
+  font-family: 'Poppins', sans-serif;
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.imgBox {
+  width: 300px;
+  height: 300px;
+  border: 2px solid black;
+  -webkit-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+  overflow: hidden;
+  -webkit-animation: imageAnim 6s;
+          animation: imageAnim 6s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+}
+
+.imgBox:hover {
+  -webkit-box-shadow: 4px 4px #f5dd0a;
+          box-shadow: 4px 4px #f5dd0a;
+  -webkit-transform: rotate(20deg);
+          transform: rotate(20deg);
+}
+
+.imgBox img {
+  height: 100%;
+}
+
+@-webkit-keyframes imageAnim {
+  0% {
+    margin-left: 0px;
+  }
+  50% {
+    margin-left: 145px;
+  }
+  100% {
+    margin-right: 0;
+  }
+}
+
+@keyframes imageAnim {
+  0% {
+    margin-left: 0px;
+  }
+  50% {
+    margin-left: 145px;
+  }
+  100% {
+    margin-right: 0;
+  }
+}
+
+header h1 {
+  font-size: 40px;
+  color: #1b1b44;
+  font-weight: 900;
+}
+
+header h4 {
+  font-size: 30px;
+  color: #c03300;
+  font-weight: 600;
+}
+/*# sourceMappingURL=about.css.map */
